@@ -1,14 +1,19 @@
+<!--
 <p align="center">
   <img src="https://github.com/Jefffer/pk4u-frontend/blob/main/public/logo-transparent.png" alt="PK4U Logo" width="120"/>  
 </p>
+-->
+
+<h1 align="center">
+  <img src="https://github.com/Jefffer/pk4u-frontend/blob/main/public/logo-transparent.png" alt="PK4U Logo" width="50"/>  
+  <span>PK4U</span>: Parking for You - Eureka Server
+</h1>
 
 <p align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*-uckV8DOh3l0bCvqZ73zYg.png" alt="java" width="280"/>
+  <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*-uckV8DOh3l0bCvqZ73zYg.png" alt="java" width="220"/>
 </p>
 
-# 🅿️ PK4U: Parking for You - Eureka Server
-
-
+This project is a **Java-based** Eureka server designed for service discovery in microservices architectures. It enables seamless registration and discovery of services, making it an essential component for building scalable and resilient distributed systems.
 
 ## 🚀 Local Deployment
 
