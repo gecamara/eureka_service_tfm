@@ -2,7 +2,6 @@
 <p align="center">
   <img src="https://github.com/Jefffer/pk4u-frontend/blob/main/public/logo-transparent.png" alt="PK4U Logo" width="120"/>  
 </p>
--->
 
 <h1 align="center">
   <img src="https://github.com/Jefffer/pk4u-frontend/blob/main/public/logo-transparent.png" alt="PK4U Logo" width="50"/>  
@@ -12,8 +11,21 @@
 <p align="center">
   <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*-uckV8DOh3l0bCvqZ73zYg.png" alt="java" width="220"/>
 </p>
+-->
 
-This project is a **Java-based** Eureka server designed for service discovery in microservices architectures. It enables seamless registration and discovery of services, making it an essential component for building scalable and resilient distributed systems.
+<div align="center">
+  <img src="https://github.com/Jefffer/pk4u-frontend/blob/main/public/logo-transparent.png?raw=true" alt="PK4U Logo" width="80"/>
+  <h1>PK4U: Parking for You - Eureka Server</h1>
+  <p>
+    <em>The Service Registry for the PK4U microservices ecosystem</em>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/Java-21-blue.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21"/>
+    <img src="https://img.shields.io/badge/Spring_Cloud-3-green.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring Cloud 3"/>
+  </p>
+</div>
+
+This project is the **Eureka Server** for the PK4U microservices architecture. It acts as a **service registry**, allowing all other microservices (like the API Gateway and the Backend) to register themselves and discover the locations of other services dynamically. It is the central nervous system that enables communication within the distributed system.
 
 ## 🚀 Local Deployment
 
@@ -34,6 +46,20 @@ cd eureka_service_tfm
 ### 2. Environment Setup 🛠️
 The application's configuration is managed in the `src/main/resources/application.yml` file. Ensure that the connection properties are correct for your local environment.
 
+Example `application.yml`:
+
+```yaml
+server:
+  port: 8761 # Default port for Eureka
+
+eureka:
+  client:
+    register-with-eureka: false # The server doesn't register itself
+    fetch-registry: false # The server doesn't fetch the registry
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+```
+
 ### 3. Running the Application ▶️
 You can run the application using the Maven or Gradle plugin.
 
@@ -49,7 +75,10 @@ With Gradle:
 ./gradlew bootRun
 ```
 
-### 4. Running the Full System 🌐
+### 4. Verify Eureka is Running ✅
+Once the application has started, open your web browser and navigate to `http://localhost:8761`. You should see the Eureka dashboard, where other services will appear once they register.
+
+### 5. Running the Full System 🌐
 Keep in mind that the frontend is only the **presentation layer** of the PK4U system. for full functionality, you need to have all the backend services running.
 
 Make sure to clone and run the following repositories in the recommended order:
